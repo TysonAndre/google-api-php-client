@@ -71,10 +71,11 @@ class Google_Service_Resource
 
   /**
    * TODO: This function needs simplifying.
-   * @param $name
+   * @param string $name
    * @param $arguments
-   * @param $expectedClass - optional, the expected class name
-   * @return Google_Http_Request|expectedClass
+   * @param string|null $expectedClass - optional, the expected class name
+   * @return \GuzzleHttp\Psr7\Request|mixed (If deferred, returns the request.
+   *         Otherwise, returns the response. If $expectedClass is provided, the response will be of that class.
    * @throws Google_Exception
    */
   public function call($name, $arguments, $expectedClass = null)

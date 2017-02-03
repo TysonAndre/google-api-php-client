@@ -33,7 +33,7 @@ class Google_Http_REST
    *
    * @param Google_Client $client
    * @param Psr\Http\Message\RequestInterface $req
-   * @return array decoded result
+   * @return array|object decoded result
    * @throws Google_Service_Exception on server side error (ie: not authenticated,
    *  invalid or malformed post body, invalid url)
    */

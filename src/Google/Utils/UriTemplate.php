@@ -42,7 +42,7 @@ class Google_Utils_UriTemplate
   );
 
   /**
-   * @var reserved array
+   * @var array $reserved
    * These are the characters which should not be URL encoded in reserved
    * strings.
    */

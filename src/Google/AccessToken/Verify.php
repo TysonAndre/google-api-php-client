@@ -45,6 +45,11 @@ class Google_AccessToken_Verify
   private $cache;
 
   /**
+   * @var object (JWT or Firebase\JWT\JWT, depending on dependency version)
+   */
+  private $jwt;
+
+  /**
    * Instantiates the class, but does not initiate the login flow, leaving it
    * to the discretion of the caller.
    */
@@ -72,8 +77,9 @@ class Google_AccessToken_Verify
    * The audience parameter can be used to control which id tokens are
    * accepted.  By default, the id token must have been issued to this OAuth2 client.
    *
+   * @param string $idToken
    * @param $audience
-   * @return array the token payload, if successful
+   * @return array|false the token payload, if successful
    */
   public function verifyIdToken($idToken, $audience = null)
   {
